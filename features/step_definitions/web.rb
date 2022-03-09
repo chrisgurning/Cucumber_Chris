@@ -15,6 +15,27 @@ end
 
 Then(/^website home page will have displayed$/) do
   @browser = HomePage.new
-  expect(@browser).to flex_container
-  expect(@browser).to avatar
+  expect(@browser).to have_flex_container
+  expect(@browser).to have_avatar
 end
+
+And(/^user to product page$/) do
+  @browser = ProductPage.new
+  @browser.load
+  expect(@browser).to have_main_product
+  @browser.action_cart.click
+  @browser.wait_until_dialog_panel_visible(wait: 20)
+  @browser.cart_button.click
+  @browser.wait_until_cart_title_visible(wait: 20)
+  @browser.wait_until_list_cart_product_visible(wait: 20)
+end
+
+And(/^search product$/) do
+  @browser.input_search.send_keys(ENV['PRODUCT_NAME'])
+  @browser.searh_button.click
+  @browser.wait_until_thumbnail_product_visible(wait: 20)
+end
+
+
+
+
