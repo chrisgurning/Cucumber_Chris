@@ -3,7 +3,7 @@ autoload :JsonPath, 'jsonpath'
 Given(/^user login to hit the API$/) do
   @headers = {
     'Content-Type' => 'application/json',
-    'Authorization' => "Bearer #{ENV['API_ACCESS_TOKEN']}"
+    'Accept' => "*/*"
   }
   @path = ENV['API_BASE_URL']
 end
