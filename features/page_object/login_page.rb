@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 class LoginPage < SitePrism::Page
   path = ENV['WEB_BASE_URL'] + '/login'

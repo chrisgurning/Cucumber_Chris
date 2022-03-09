@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 class ProductPage < SitePrism::Page
     path = ENV['WEB_BASE_URL'] + '/p/komputer/printer/tinta-printer/j1wktm-jual-hp-680-black-ink-cartridge-f6v27aa'
