@@ -30,6 +30,8 @@ Feature: Rest API Testing
     """
     Then response status should be "201"
     And response should have "$..userId" matching "12"
+    And response should have "$..body" matching "motorcycle"
+    And response should have "$..title" matching "recommendation"
 
 
     
