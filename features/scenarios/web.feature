@@ -2,22 +2,17 @@
 Feature: Web Automation Testing 
 
   @web-login
-  Scenario: Login to Bukalapak
+  Scenario: Login to DMS-Simplidots
     Given user is on login page
     When user enter a valid credential
     Then website home page will have displayed
 
-  @web-add_to_cart
-  Scenario: Add Product to Cart
+  @Create-NewOrder
+  Scenario: Create New Order With Valid Data
     Given user is on login page
     When user enter a valid credential
     Then website home page will have displayed
-    And user to product page 
+    And user create new order 
 
-  @search-product
-  Scenario: Search Product
-    Given user is on login page
-    When user enter a valid credential
-    Then website home page will have displayed
-    And search product
+ 
 
